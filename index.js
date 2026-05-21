@@ -97,10 +97,10 @@ async function turnOffAllRacks() {
 // Schedule cron jobs: 2:50pm ON (Mon-Fri), 10pm OFF (Mon-Fri)
 function startRackSchedule() {
   // 2:50pm (14:50) Monday-Friday - Turn ON all racks
-  cron.schedule('53 14 * * 1-5', () => {
+  cron.schedule('0 7 * * 1-5', () => {
     turnOnAllRacks();
   });
-  console.log(`${new Date().toISOString()} - Cron job scheduled: Turn ON racks at 2:50pm (Mon-Fri)`);
+  console.log(`${new Date().toISOString()} - Cron job scheduled: Turn ON racks at 7:00am (Mon-Fri)`);
 
   // 10pm (22:00) Monday-Friday - Turn OFF all racks
   cron.schedule('0 22 * * 1-5', () => {
