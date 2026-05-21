@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: cesis-blustream:latest
-    container_name: cesis-blustream
+    image: cesis-rackschedule:latest
+    container_name: cesis-rackschedule
     env_file:
       - .env
     ports:
