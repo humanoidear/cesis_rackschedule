@@ -78,8 +78,10 @@ async function turnOnAllRacks() {
   console.log(`${new Date().toISOString()} - Turning ON all racks (${netioIPs.length} racks)`);
   
   for (const ip of netioIPs) {
-    const result = await NETIO_On(ip);
-    console.log(`${new Date().toISOString()} - NETIO_On ${ip}: ${result}`);
+    const result0 = await NETIO_On(ip, 2);
+    console.log(`${new Date().toISOString()} - NETIO_On ${ip} ID 0: ${result0}`);
+    const result1 = await NETIO_On(ip, 1);
+    console.log(`${new Date().toISOString()} - NETIO_On ${ip} ID 1: ${result1}`);
   }
 }
 
@@ -89,8 +91,10 @@ async function turnOffAllRacks() {
   console.log(`${new Date().toISOString()} - Turning OFF all racks (${netioIPs.length} racks)`);
   
   for (const ip of netioIPs) {
-    const result = await NETIO_Off(ip);
-    console.log(`${new Date().toISOString()} - NETIO_Off ${ip}: ${result}`);
+    const result0 = await NETIO_Off(ip, 2);
+    console.log(`${new Date().toISOString()} - NETIO_Off ${ip} ID 0: ${result0}`);
+    const result1 = await NETIO_Off(ip, 1);
+    console.log(`${new Date().toISOString()} - NETIO_Off ${ip} ID 1: ${result1}`);
   }
 }
 
