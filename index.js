@@ -104,7 +104,7 @@ function startRackSchedule() {
   const machineTimezone = 'Europe/Paris'; // Replace with actual machine timezone if needed
 
   // 7am (07:00) Monday-Friday - Turn ON all racks
-  cron.schedule('55 16 * * 1-5', () => {
+  cron.schedule('56 14 * * 1-5', () => {
     turnOnAllRacks();
   }, { timeZone: machineTimezone });
   console.log(`${new Date().toISOString()} - Cron job scheduled: Turn ON racks at 7am (Mon-Fri)`);
