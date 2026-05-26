@@ -104,13 +104,13 @@ function startRackSchedule() {
   const machineTimezone = 'Europe/Paris'; // Replace with actual machine timezone if needed
 
   // 7am (07:00) Monday-Friday - Turn ON all racks
-  cron.schedule('56 14 * * 1-5', () => {
+  cron.schedule('0 5 * * 1-5', () => {
     turnOnAllRacks();
   }, { timeZone: machineTimezone });
   console.log(`${new Date().toISOString()} - Cron job scheduled: Turn ON racks at 7am (Mon-Fri)`);
 
   // 10pm (22:00) Monday-Friday - Turn OFF all racks
-  cron.schedule('0 22 * * 1-5', () => {
+  cron.schedule('0 20 * * 1-5', () => {
     turnOffAllRacks();
   }, { timeZone: machineTimezone });
   console.log(`${new Date().toISOString()} - Cron job scheduled: Turn OFF racks at 10pm (Mon-Fri)`);
