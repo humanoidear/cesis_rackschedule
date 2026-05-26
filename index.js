@@ -100,16 +100,20 @@ async function turnOffAllRacks() {
 
 // Schedule cron jobs: 7am ON (Mon-Fri), 10pm OFF (Mon-Fri)
 function startRackSchedule() {
+  // Get machine timezone
+  const machineTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  console.log(`${new Date().toISOString()} - Using machine timezone: ${machineTimezone}`);
+
   // 7am (07:00) Monday-Friday - Turn ON all racks
-  cron.schedule('0 7 * * 1-5', () => {
+  cron.schedule('50 16 * * 1-5', () => {
     turnOnAllRacks();
-  });
+  }, { timeZone: machineTimezone });
   console.log(`${new Date().toISOString()} - Cron job scheduled: Turn ON racks at 7:00am (Mon-Fri)`);
 
   // 10pm (22:00) Monday-Friday - Turn OFF all racks
   cron.schedule('0 22 * * 1-5', () => {
     turnOffAllRacks();
-  });
+  }, { timeZone: machineTimezone });
   console.log(`${new Date().toISOString()} - Cron job scheduled: Turn OFF racks at 10pm (Mon-Fri)`);
 }
 

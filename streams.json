@@ -2,43 +2,7 @@
   "2.06 SALA 1": {
     "domo": ["172.31.17.58"],
     "minidomo": ["172.31.16.234", "172.31.16.235"],
-    "netio": "172.31.17.143",
+    "netio": "172.31.17.161",
     "audio": "http://capturebox11.uv.es/streams/1/flv"
-  },
-  "2.08 SALA 2": {
-    "domo": ["172.31.17.91"],
-    "minidomo": ["172.31.17.27", "172.31.17.28"],
-    "netio": "172.31.17.145",
-    "audio": "http://capturebox21.uv.es/streams/1/flv"
-  },
-  "2.10 SALA 3": {
-    "domo": ["172.31.17.82"],
-    "minidomo": ["172.31.17.32", "172.31.17.33"],
-    "netio": "172.31.17.173",
-    "audio": "http://capturebox31.uv.es/streams/1/flv"
-  },
-  "2.11 SALA4/UCI": {
-    "domo": ["172.31.17.83"],
-    "minidomo": ["172.31.17.37", "172.31.17.81"],
-    "netio": "172.31.17.158",
-    "audio": "http://capturebox41.uv.es/streams/1/flv"
-  },
-  "2.12 URGÈNCIES": {
-    "domo": ["172.31.17.84"],
-    "minidomo": ["172.31.17.41", "172.31.17.42"],
-    "netio": "172.31.17.159",
-    "audio": "http://capturebox51.uv.es/streams/1/flv"
-  },
-  "2.15 HOSPITALITZ": {
-    "domo": ["172.31.17.86"],
-    "minidomo": ["172.31.17.45", "172.31.17.46"],
-    "netio": "172.31.17.160",
-    "audio": "http://capturebox61.uv.es/streams/1/flv"
-  },
-  "2.14 FISIOTERAP.": {
-    "domo": ["172.31.17.90"],
-    "minidomo": ["172.31.17.121", "172.31.17.122"],
-    "netio": "172.31.17.164",
-    "audio": "http://capturebox101.uv.es/streams/1/flv"
   }
 }
